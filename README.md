@@ -180,3 +180,7 @@ selenium.common.exceptions.TimeoutException: Message:
 目前的办法：将`WebDriverWait(browser, 10).until(…)`的“10”改为大一些的数（它代表最长等待时间），然后重新运行。
 
 > 也可以改`detect()`：将`arguments`的初始值设为已探明的结果（仍以词典的形式），给`indices`参数传入接下来要探测的变量的索引，将`is_first_argument`的初始值设为`False`。
+
+## 这样就结束了吗？
+
+不，请移步TamperMonkey文件夹，那里有两个能自动跳转、刷新页面的小脚本。如果您都配置好了，那么以后在提交页粘贴代码后只需按三下Tab，再按Enter，然后等一会儿就能看到结果，而不必频繁使用键盘或鼠标了。
