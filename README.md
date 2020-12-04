@@ -1,7 +1,7 @@
 # detect-BITOJ
 探测BIT乐学OJ（[lexue.bit.edu.cn/mod/programming/*](http://lexue.bit.edu.cn/mod/programming/)）的保密测试用例。
 
-如果您的唯一目的是查看已探明的保密测试用例，请移步“保密测试用例.md”。
+如果您的唯一目的是查看已探明的保密测试用例，请移步[保密测试用例.md](保密测试用例.md)。
 
 [toc]
 
