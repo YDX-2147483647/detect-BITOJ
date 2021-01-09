@@ -185,4 +185,31 @@ selenium.common.exceptions.TimeoutException: Message:
 
 不，请移步TamperMonkey文件夹，那里有两个能自动跳转、刷新页面的小脚本。如果您都配置好了，那么以后在提交页粘贴代码后只需按三下Tab，再按Enter，然后等一会儿就能看到结果，而不必频繁使用键盘或鼠标了。
 
-（2021年1月9日）新增了一个脚本，它会把结果页的RE、FPE、TLE、KS设置成与AC、WA都不同的颜色。
+---
+
+> 2021年1月9日。
+
+新增了一个脚本，它会把结果页的RE、FPE、TLE、KS设置成与AC、WA都不同的颜色。您可以找个测试用例多的题目，提交下面这个程序试一下。
+
+```c
+#include <sys/timeb.h>
+#include <stdlib.h>
+#include <signal.h>
+
+int main(){
+    struct timeb t;
+    ftime(&t);
+    srand((unsigned int) t.millitm);
+    
+    switch(rand() % 5){
+        case 0: raise(SIGPIPE); break;  // WA/AC
+        case 1: raise(SIGFPE); break;  // FPE
+        case 2: raise(SIGKILL); break;  // TLE
+        case 3: raise(SIGABRT); break;  // RE
+        case 4: raise(SIGTERM); break;  // KS
+    }
+    
+    return 0;
+}
+```
+
