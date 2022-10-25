@@ -129,6 +129,7 @@ if __name__ == "__main__":
         with open(save_directory, "a") as f:
             f.write(time.asctime())
             f.write(f"\npage id: {page_id}\n")
+            f.write(f"args: {args}\n")
             f.write(repr(arguments))
             f.write("\n\n")
         print(f"已存入 {save_directory} 。")
